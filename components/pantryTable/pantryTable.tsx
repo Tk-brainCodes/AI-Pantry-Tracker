@@ -16,7 +16,7 @@ import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
 import KeyboardArrowLeftIcon from "@mui/icons-material/KeyboardArrowLeft";
 import EditModal from "@/components/modal/editModal";
 import DeleteItem from "../modal/deleteModal";
-
+import Image from "next/image";
 
 import { usePantry } from "@/components/provider";
 import { PantryItem } from "@/components/provider";
@@ -133,6 +133,7 @@ export default function PantryTbale() {
               <th style={{ width: 240, padding: "12px 6px" }}>Item name</th>
               <th style={{ width: 240, padding: "12px 6px" }}>Quantity</th>
               <th style={{ width: 240, padding: "12px 6px" }}>Category</th>
+              <th style={{ width: 240, padding: "12px 6px" }}>Image</th>
               <th style={{ width: 140, padding: "12px 6px" }}>Actions </th>
             </tr>
           </thead>
@@ -159,6 +160,15 @@ export default function PantryTbale() {
                 <td>{row.name}</td>
                 <td>{row.quantity}</td>
                 <td>{row.category || "N/A"}</td>
+                <td>
+                  <Image
+                    src={row.imageUrl as string}
+                    alt='item-image'
+                    width={500}
+                    height={500}
+                    className='w-[100px] h-[100px] rounder-md'
+                  />
+                </td>
                 <td>
                   <Box sx={{ display: "flex", gap: 1 }}>
                     <EditModal item={row} />
