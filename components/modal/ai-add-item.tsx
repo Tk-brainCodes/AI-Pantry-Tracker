@@ -134,7 +134,7 @@ export default function UploadCaptureModal() {
         className='bg-black'
         onClick={() => setOpen(true)}
       >
-        Upload or Scan item
+        Add or Scan item
       </Button>{" "}
       <Transition in={open} timeout={400}>
         {(state) => (

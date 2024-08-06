@@ -8,7 +8,6 @@ import Logo from "@/assets/shopping-bag.svg";
 import Image from "next/image";
 import Box from "@mui/joy/Box";
 import Typography from "@mui/joy/Typography";
-import BasicModalDialog from "@/components/modal/modal";
 import UploadCaptureModal from "../modal/ai-add-item";
 import UserProfile from "@/components/user-profile";
 
@@ -81,7 +80,6 @@ export default function Header() {
             justifyContent: "center",
           }}
         >
-          <BasicModalDialog />
           <UploadCaptureModal />
           <UserProfile />
         </Sheet>
