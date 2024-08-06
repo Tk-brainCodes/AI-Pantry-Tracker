@@ -16,7 +16,7 @@ Pantry Tracker is a web application that helps you manage your pantry items effi
 - **Responsive Design**: The application is designed to work seamlessly on both desktop and mobile devices.
 
 🛠️ **Technologies**
-- React.js
+- Next js
 - TypeScript
 - Firebase (Firestore and Storage)
 - Material-UI (MUI)
