@@ -1,7 +1,3 @@
-Here's the updated GitHub README for your project, "Pantry Tracker":
-
----
-
 # Pantry Tracker - Manage Your Pantry with Ease!
 
 Pantry Tracker is a web application that helps you manage your pantry items efficiently. Keep track of your food inventory, monitor expiry dates, and upload images of your items for easy identification.
@@ -64,6 +60,3 @@ To run the project in your local environment, follow these steps:
 📸 **Video**
 - 
 
----
-
-Feel free to modify the repository URL, Firebase, and Google API key instructions as per your project setup.
