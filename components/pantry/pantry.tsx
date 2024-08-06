@@ -18,7 +18,6 @@ export default function PantryTracker() {
         <CssBaseline />
         <Box sx={{ display: "flex", minHeight: "100dvh" }}>
           <Header />
-          {/* <CameraCapture /> */}
           <Box
             component='main'
             className='MainContent'

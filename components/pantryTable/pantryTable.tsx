@@ -51,6 +51,7 @@ export default function PantryTbale() {
           "& > *": {
             minWidth: { xs: "120px", md: "160px" },
           },
+          backgroundColor: "white"
         }}
       >
         <FormControl size='sm'>
@@ -67,6 +68,7 @@ export default function PantryTbale() {
           <select
             value={selectedCategory || ""}
             onChange={(e) => setSelectedCategory(e.target.value || null)}
+            className="bg-white"
           >
             <option value=''>All Categories</option>
             {Array.from(new Set(items.map((item) => item.category))).map(
@@ -89,6 +91,7 @@ export default function PantryTbale() {
           flexShrink: 1,
           overflow: "auto",
           maxHeight: "70vh",
+          backgroundColor: "white"
         }}
       >
         <Table

@@ -18,7 +18,7 @@ export default function JoySignInSideTemplate() {
   const { signInWithGoogle } = useAuth();
 
   return (
-    <CssVarsProvider defaultMode='dark' disableTransitionOnChange>
+    <CssVarsProvider defaultMode='light' disableTransitionOnChange>
       <CssBaseline />
       <GlobalStyles
         styles={{
