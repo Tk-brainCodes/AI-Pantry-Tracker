@@ -59,12 +59,7 @@ To run the project in your local environment, follow these steps:
 6. Open [http://localhost:3000](http://localhost:3000) in your web browser to view the app.
 
 💡 **Improvements**
-- **Enhanced Image Classification**: Improve the accuracy of AI image classification.
-- **User Accounts**: Implement user accounts for personalized pantry management.
 - **Detailed Statistics**: Provide detailed statistics and reports on pantry usage and item expiry.
-
-🐞 **Issues**
-- Currently, the application might not work optimally on all mobile devices.
 
 📸 **Video**
 - 
