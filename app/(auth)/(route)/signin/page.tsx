@@ -69,7 +69,7 @@ export default function JoySignInSideTemplate() {
                 height={500}
                 className='w-[40px] h-[40px]'
               />
-              <Typography level='title-lg' sx={{ color: "#108910" }}>
+              <Typography level='title-lg' sx={{ color: "white" }}>
                 Pantry Tracker
               </Typography>
             </Box>

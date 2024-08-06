@@ -16,14 +16,11 @@ import IconButton from "@mui/joy/IconButton";
 import CloseIcon from "@mui/icons-material/Close";
 import ImageIcon from "@mui/icons-material/Image";
 import CameraAltIcon from "@mui/icons-material/CameraAlt";
-
 import { LoaderCircle } from "lucide-react";
 import { Transition } from "react-transition-group";
 import { toast } from "react-toastify";
 import { classifyPantryImage } from "@/lib/langchain";
 import { usePantry } from "@/components/provider";
-import { storage } from "@/lib/firebase";
-import { ref, uploadBytes, getDownloadURL } from "firebase/storage";
 
 export default function UploadCaptureModal() {
   const [open, setOpen] = useState(false);
@@ -59,10 +56,11 @@ export default function UploadCaptureModal() {
   const handleAddItem = async () => {
     try {
       if (itemExpiry && itemCategory && itemName) {
+        const formattedExpiry = itemExpiry.toLocaleDateString("en-CA"); 
         await addItem(
           itemName,
           itemQuantity,
-          itemExpiry?.toLocaleString(),
+          formattedExpiry,
           itemCategory,
           image
         );
@@ -123,6 +121,11 @@ export default function UploadCaptureModal() {
     }
   };
 
+  const handleCapturedImage = (capturedImage: string) => {
+    setImage(capturedImage);
+    handleClassifyImage();
+  };
+
   return (
     <>
       <Button
@@ -131,7 +134,7 @@ export default function UploadCaptureModal() {
           p: "0.8em 1.5em",
           borderRadius: "50px",
         }}
-        className='bg-black'
+        className='bg-[#4158A6]'
         onClick={() => setOpen(true)}
       >
         Add or Scan item
@@ -216,6 +219,7 @@ export default function UploadCaptureModal() {
                     categories={categories}
                     setItemCategory={setItemCategory}
                     setItemName={setItemName}
+                    onCapture={handleCapturedImage} 
                   />
                   <FormLabel>Name</FormLabel>
                   <Input

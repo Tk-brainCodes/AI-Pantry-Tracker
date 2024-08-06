@@ -166,7 +166,7 @@ export default function PantryTbale() {
                     alt='item-image'
                     width={500}
                     height={500}
-                    className='w-[100px] h-[100px] rounder-md'
+                    className='w-[50px] h-[50px] rounded-md'
                   />
                 </td>
                 <td>

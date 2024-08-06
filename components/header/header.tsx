@@ -67,7 +67,7 @@ export default function Header() {
             height={500}
             className='w-[40px] h-[40px]'
           />
-          <Typography level='h3' component='h1' sx={{ color: "#108910" }}>
+          <Typography level='h3' component='h1' sx={{ color: "white" }}>
             Pantry Tracker
           </Typography>{" "}
         </IconButton>

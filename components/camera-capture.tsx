@@ -11,10 +11,12 @@ const CameraCapture = ({
   setItemName,
   setItemCategory,
   categories,
+  onCapture, 
 }: {
   setItemName: any;
   setItemCategory: any;
   categories: any;
+  onCapture: (image: string) => void;
 }) => {
   const camera = useRef<any>(null);
   const [image, setImage] = useState<string | null>(null);
@@ -27,9 +29,8 @@ const CameraCapture = ({
     const photo = camera.current.takePhoto();
     setImage(photo);
     setClassificationResult(null);
+    onCapture(photo); 
   };
-
-
 
   const classifyImage = async (file: File) => {
     setLoading(true);
@@ -59,7 +60,7 @@ const CameraCapture = ({
     reader.readAsDataURL(file);
   };
 
-    const handleUpload = async () => {
+  const handleUpload = async () => {
     if (image) {
       const response = await fetch(image);
       const blob = await response.blob();
@@ -107,7 +108,9 @@ const CameraCapture = ({
           </Button>
         </div>
       )}
-      {loading && <p className="text-xl text-green-400 mt-2 mb-2">Classifying image...</p>}
+      {loading && (
+        <p className='text-xl text-green-400 mt-2 mb-2'>Classifying image...</p>
+      )}
       {classificationResult && (
         <p className='text-xl font-semibold'>{classificationResult}</p>
       )}
