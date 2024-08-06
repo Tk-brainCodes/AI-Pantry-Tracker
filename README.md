@@ -58,6 +58,6 @@ To run the project in your local environment, follow these steps:
 - **Detailed Statistics**: Provide detailed statistics and reports on pantry usage and item expiry.
 
 📸 **Video**
-[![Pantry Tracker Demo](https://www.youtube.com/watch?v=oy_uNTiHhik)](https://www.youtube.com/watch?v=oy_uNTiHhik)
+[![Pantry Tracker Demo](./assets/pantry.png)](https://www.youtube.com/watch?v=oy_uNTiHhik)
 
 
